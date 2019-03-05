@@ -26,15 +26,19 @@ tensorflow == 1.2.0<br>
 |filter|8,449,133|
 
 注：过滤后的数据总量为8,449,133<br>
+
 **2、数据预处理**<br>
 tokenize(./preprocess/token.sh);<br>
 lower(./preprocess/lower.sh);<br>
 filter(./preprocess/data_filter_merge.ipynb, we filtered the source and target sentence with length <= 70 and the length ratio between 1/3 to 3);<br>
 merge(./preprocess/data_filter_merge.ipynb，将所有数据集按照语言分别合并);<br>
+
 **3、词表生成**<br>
 分别生成源端和目标端的词表，生成后的词表按照词频排序，代码见：./prepro.py，运行代码前要先设置词表大小;<br>
+
 **4、预训练专家模型**<br>
 设置exp_hyperparams.py中的参数，运行expert_model.py;<br>
+
 **5、联合训练专家模型和qe模型**<br>
 设置qe_hyperparams.py中的参数，运行qe_model.py;<br>
 使用 Sentence-level QE en-de smt 训练en-de模型，使用 Sentence-level QE de-en smt 训练de-en模型;<br>
