@@ -1,0 +1,6 @@
+perl ./mosesdecoder-master/scripts/tokenizer/tokenizer.perl -l en -threads 16 < ./2018/sentence_level_test/sentence_level/en_de/test.smt.src > ./2018/sentence_level_test/sentence_level/en_de/test.smt.tok.src
+perl ./mosesdecoder-master/scripts/tokenizer/tokenizer.perl -l de -threads 16 < ./2018/sentence_level_test/sentence_level/en_de/test.smt.mt > ./2018/sentence_level_test/sentence_level/en_de/test.smt.tok.mt
+perl ./mosesdecoder-master/scripts/tokenizer/tokenizer.perl -l en -threads 16 < ./2018/sentence_level_test/sentence_level/en_de/test.nmt.src > ./2018/sentence_level_test/sentence_level/en_de/test.nmt.tok.src
+perl ./mosesdecoder-master/scripts/tokenizer/tokenizer.perl -l de -threads 16 < ./2018/sentence_level_test/sentence_level/en_de/test.nmt.mt > ./2018/sentence_level_test/sentence_level/en_de/test.nmt.tok.mt
+perl ./mosesdecoder-master/scripts/tokenizer/tokenizer.perl -l de -threads 16 < ./2018/sentence_level_test/sentence_level/de_en/test.smt.src > ./2018/sentence_level_test/sentence_level/de_en/test.smt.tok.src
+perl ./mosesdecoder-master/scripts/tokenizer/tokenizer.perl -l en -threads 16 < ./2018/sentence_level_test/sentence_level/de_en/test.smt.mt > ./2018/sentence_level_test/sentence_level/de_en/test.smt.tok.mt
