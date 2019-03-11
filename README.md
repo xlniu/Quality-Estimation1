@@ -44,11 +44,15 @@ merge(./preprocess/data_filter_merge.ipynb，将所有数据集按照语言分�
 使用 Sentence-level QE en-de smt 训练en-de模型，使用 Sentence-level QE de-en smt 训练de-en模型;<br>
 
 ## 实验结果
-|Data|Pearson’s|
-|:---|:---|
-|test 2017 en-de||
-|state of the art(Single)|0.6837|
-|test 2017 de-en||
-|state of the art(Single)|0.7099|
+|Data|Pearson’s|vocab_size|batch|steps|
+|:---|:---|:---|:---|:---|
+|test 2017 en-de|0.5974|30k|128|500k|
+|state of the art(Single)|0.6837|120k|||
+|test 2017 de-en|||||
+|state of the art(Single)|0.7099|120k|||
 
-注：state of the art 参考论文：[“Bilingual Expert” Can Find Translation Errors](https://arxiv.org/pdf/1807.09433.pdf) ;<br>
+注：<br>
+1、state of the art 参考论文：[“Bilingual Expert” Can Find Translation Errors](https://arxiv.org/pdf/1807.09433.pdf) ;<br>
+2、表中的batch和steps都是说的训练专家模型的情况，steps指训练了多少步（每一步是一个batch）<br>
+3、从我的观察来看，基本上是专家模型被训练的steps越多，后续再联合训练qe模型而得到的结果就越好，但是随着专家模型被训练步数的不断增多（比如达到350k以上），最终的结果会出现波动;<br>
+4、训练专家模型和联合训练qe模型的日志文件都放在了 ./nohup 文件夹下;<br>
