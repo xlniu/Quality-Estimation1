@@ -28,10 +28,10 @@ tensorflow == 1.2.0<br>
 注：过滤后的数据总量为8,449,133<br>
 
 **2、数据预处理**<br>
-tokenize(./preprocess/token.sh);<br>
-lower(./preprocess/lower.sh);<br>
-filter(./preprocess/data_filter_merge.ipynb, we filtered the source and target sentence with length <= 70 and the length ratio between 1/3 to 3);<br>
-merge(./preprocess/data_filter_merge.ipynb，将所有数据集按照语言分别合并);<br>
+**tokenize**(./preprocess/token.sh);<br>
+**lower**(./preprocess/lower.sh);<br>
+**filter**(./preprocess/data_filter_merge.ipynb, we filtered the source and target sentence with length <= 70 and the length ratio between 1/3 to 3);<br>
+**merge**(./preprocess/data_filter_merge.ipynb，将所有数据集按照语言分别合并);<br>
 
 **3、词表生成**<br>
 分别生成源端和目标端的词表，生成后的词表按照词频排序，代码见：./prepro.py，运行代码前要先设置词表大小;<br>
@@ -52,7 +52,7 @@ merge(./preprocess/data_filter_merge.ipynb，将所有数据集按照语言分�
 |state of the art(Single)|0.7099|120k|||
 
 注：<br>
-1、state of the art 参考论文：[“Bilingual Expert” Can Find Translation Errors](https://arxiv.org/pdf/1807.09433.pdf) ;<br>
-2、表中的batch和steps都是说的训练专家模型的情况，steps指训练了多少步（每一步是一个batch）<br>
-3、从我的观察来看，基本上是专家模型被训练的steps越多，后续再联合训练qe模型而得到的结果就越好，但是随着专家模型被训练步数的不断增多（比如达到350k以上），最终的结果会出现波动;<br>
-4、训练专家模型和联合训练qe模型的日志文件都放在了 ./nohup 文件夹下;<br>
+1、state of the art 参考论文：[“Bilingual Expert” Can Find Translation Errors](https://arxiv.org/pdf/1807.09433.pdf) ；<br>
+2、表中的batch和steps都是说的训练专家模型的情况，steps指训练了多少步（每一步是一个batch）；<br>
+3、从我的观察来看，基本上是专家模型被训练的steps越多，后续再联合训练qe模型而得到的结果就越好，但是随着专家模型被训练步数的不断增多（比如达到350k以上），最终的结果会出现波动；<br>
+4、训练专家模型和联合训练qe模型的日志文件都放在了 ./nohup 文件夹下；<br>
