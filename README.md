@@ -47,9 +47,9 @@ tensorflow == 1.2.0<br>
 |Data|Pearson’s|vocab_size|batch|steps|
 |:---|:---|:---|:---|:---|
 |test 2017 en-de|0.5974|30k|128|500k|
-|state of the art(Single)|0.6837|120k|||
-|test 2017 de-en|||||
-|state of the art(Single)|0.7099|120k|||
+|state of the art(Single)|0.6837|120k|-|-|
+|test 2017 de-en|0.6745|30k|128|410k|
+|state of the art(Single)|0.7099|120k|-|-|
 
 注：<br>
 1、state of the art 参考论文：[“Bilingual Expert” Can Find Translation Errors](https://arxiv.org/pdf/1807.09433.pdf) ；<br>
