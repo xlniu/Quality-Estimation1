@@ -1,0 +1,602 @@
+2019-03-11 14:18:37.882635: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2019-03-11 14:18:37.882683: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2019-03-11 14:18:37.882690: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2019-03-11 14:18:37.882696: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2019-03-11 14:18:37.882701: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2019-03-11 14:18:38.223031: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: Tesla K40m
+major: 3 minor: 5 memoryClockRate (GHz) 0.745
+pciBusID 0000:84:00.0
+Total memory: 11.17GiB
+Free memory: 11.10GiB
+2019-03-11 14:18:38.223086: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2019-03-11 14:18:38.223098: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2019-03-11 14:18:38.223113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40m, pci bus id: 0000:84:00.0)
+load train data over. source sents : 23000, target sents : 23000, label : 23000
+word2id, <S></S>
+load dev data over. source sents : 1000, target sents : 1000, label : 1000
+word2id, <S></S>
+load test data over. source sents : 2000, target sents : 2000, label : 2000
+word2id, <S></S>
+  learning_rate=2, warmup_steps=8000
+Graph loaded
+  created train model with fresh parameters, time 3.44s
+  loading weights of variable encoder/num_blocks_1/multihead_attention_1/ln/Variable_1/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention_1/ln/Variable/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention_1/ln/Variable/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/ln/Variable_1/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/ln/Variable/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/ln/Variable
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_2/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_2/kernel/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_1/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_1/bias
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense/kernel/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense/bias/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d_1/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d_1/kernel/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d_1/bias/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d_1/bias
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d/kernel/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d/bias/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d/bias/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d/bias
+  loading weights of variable encoder/num_blocks_0/multihead_attention_1/ln/Variable_1/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention_1/ln/Variable
+  loading weights of variable encoder/num_blocks_0/multihead_attention/ln/Variable_1/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/ln/Variable_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/ln/Variable/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_2/bias/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_1/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense/bias/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d_1/kernel/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d_1/bias/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d_1/bias
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d/bias/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_2/kernel
+  loading weights of variable encoder/num_blocks_0/multihead_attention_1/ln/Variable_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d/bias/Adam
+  loading weights of variable encoder/enc_embed/lookup_table/Adam
+  loading weights of variable encoder/enc_embed/lookup_table
+  loading weights of variable decoder/output_projection/kernel/Adam
+  loading weights of variable decoder/output_projection/kernel
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/ln/Variable_1/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_1/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/ln/Variable
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_2/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_2/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_1/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_1/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_1/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d/kernel
+  loading weights of variable encoder/num_blocks_0/multihead_attention/ln/Variable/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense/bias/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/ln/Variable/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_2/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_2/kernel/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_2/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_2/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_1/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_1/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_1/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/ln/Variable
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d_1/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d_1/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/ln/Variable/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_2/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/ln/Variable/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_2/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_2/kernel/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_1/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_2/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_2/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense/bias/Adam
+  loading weights of variable decoder/emb_proj_layer/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d_1/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d_1/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_2/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d_1/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d_1/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_1/bias
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_2/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/ln/Variable/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_1/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/ln/Variable_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/ln/Variable/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_1/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/ln/Variable/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/ln/Variable
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_2/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_2/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d/bias
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_2/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_2/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/ln/Variable
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d/bias/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_1/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_1/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_1/bias
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d_1/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_1/bias/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_1/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/ln/Variable/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/ln/Variable_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_2/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d/kernel/Adam
+  loading weights of variable decoder/output_projection/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_1/kernel
+  loading weights of variable encoder/num_blocks_1/multihead_attention/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/ln/Variable/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d_1/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_1/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d_1/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_2/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_2/kernel/Adam
+  loading weights of variable beta1_power
+  loading weights of variable encoder/num_blocks_1/multihead_attention_1/ln/Variable_1/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d_1/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d_1/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_2/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/dec_embed/lookup_table
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_2/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d_1/bias
+  loading weights of variable decoder/forward_decoder/dec_embed/lookup_table
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/dec_embed/lookup_table/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/backward_decoder/dec_embed/lookup_table/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d_1/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d/bias
+  loading weights of variable beta2_power
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_1/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_2/bias
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_2/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/ln/Variable
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/ln/Variable/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/ln/Variable_1/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/ln/Variable/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d_1/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_1/bias
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d_1/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/ln/Variable/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_2/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense/bias/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_1/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention_1/ln/Variable_1/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_2/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d_1/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_2/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d_1/kernel/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d_1/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/ln/Variable/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_2/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/ln/Variable
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d_1/bias/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_2/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_1/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d_1/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/ln/Variable
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_1/kernel
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_1/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/ln/Variable_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_2/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense_1/bias/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention_1/ln/Variable/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_1/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_2/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/ln/Variable
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/ln/Variable/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d_1/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/ln/Variable/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_1/bias/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_2/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/ln/Variable
+  loading weights of variable decoder/forward_decoder/dec_embed/lookup_table/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_1/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_1/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention/conv1d_1/kernel
+  loading weights of variable encoder/enc_embed/lookup_table/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d_1/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_2/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_2/bias/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_2/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/ln/Variable
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/ln/Variable_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/ln/Variable_1/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention_1/ln/Variable
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_1/bias
+  loading weights of variable encoder/num_blocks_0/multihead_attention_1/ln/Variable/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d/bias/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d_1/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/ln/Variable_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_2/bias
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense/bias/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_2/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_2/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/ln/Variable_1/Adam
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_2/kernel/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/ln/Variable
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/emb_proj_layer/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_2/bias/Adam
+  loading weights of variable decoder/emb_proj_layer/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_1/multihead_attention_1/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/ln/Variable/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/dec_embed/lookup_table/Adam
+  loading weights of variable encoder/num_blocks_1/multihead_attention/ln/Variable/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/ln/Variable
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense_1/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense/bias/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d_1/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense/kernel/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/self_attention/dense_2/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d_1/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_1/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d_1/kernel
+  loading weights of variable encoder/num_blocks_1/multihead_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d_1/kernel/Adam_1
+  loading weights of variable encoder/num_blocks_0/multihead_attention/conv1d/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_1/vanilla_attention/dense_2/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_1/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/ln/Variable2019-03-11 14:18:55.912332: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 6109 get requests, put_count=5843 evicted_count=1000 eviction_rate=0.171145 and unsatisfied allocation rate=0.223605
+2019-03-11 14:18:55.912380: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+2019-03-11 14:19:31.022159: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 6301 get requests, put_count=6372 evicted_count=1000 eviction_rate=0.156937 and unsatisfied allocation rate=0.151087
+2019-03-11 14:19:31.022207: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 256 to 281
+2019-03-11 14:21:35.785237: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 38281 get requests, put_count=38391 evicted_count=1000 eviction_rate=0.0260478 and unsatisfied allocation rate=0.0247904
+2019-03-11 14:21:35.785299: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 655 to 720
+
+  loading weights of variable decoder/backward_decoder/num_blocks_0/vanilla_attention/dense/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/ln/Variable/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_1/multihead_attention/conv1d_1/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_1/self_attention/dense_2/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense/kernel
+  loading weights of variable encoder/num_blocks_0/multihead_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_1/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_1/bias
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/ln/Variable_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_1/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_1/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense/bias/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_1/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_2/bias/Adam
+  loading weights of variable decoder/backward_decoder/num_blocks_0/multihead_attention/conv1d/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_2/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/conv1d/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_2/kernel
+  loading weights of variable decoder/backward_decoder/num_blocks_1/vanilla_attention/dense/kernel/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense/bias
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/dense_2/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/ln/Variable_1/Adam_1
+  loading weights of variable decoder/backward_decoder/num_blocks_1/multihead_attention/conv1d/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/multihead_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/self_attention/ln/Variable_1/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_1/self_attention/dense_1/kernel
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense/bias/Adam_1
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense/kernel/Adam
+  loading weights of variable decoder/forward_decoder/num_blocks_0/vanilla_attention/dense_1/bias
+  load pretrained expert weights for train model, time 9.79s
+global_step : 10, sent_loss : 0.099136, time 21.50s
+global_step : 20, sent_loss : 0.063786, time 19.64s
+global_step : 30, sent_loss : 0.060257, time 19.65s
+global_step : 40, sent_loss : 0.049285, time 19.69s
+global_step : 50, sent_loss : 0.046357, time 19.67s
+# dev pearson : 0.0452975006379, test pearson : 0.0652360101344
+# Save, global step 50
+global_step : 60, sent_loss : 0.037866, time 52.80s
+global_step : 70, sent_loss : 0.050067, time 19.51s
+global_step : 80, sent_loss : 0.042239, time 19.68s
+global_step : 90, sent_loss : 0.021957, time 19.63s
+global_step : 100, sent_loss : 0.032802, time 19.62s
+# dev pearson : 0.164166671729, test pearson : 0.169713411312
+# Save, global step 100
+global_step : 110, sent_loss : 0.046579, time 51.95s
+global_step : 120, sent_loss : 0.034238, time 19.55s
+global_step : 130, sent_loss : 0.035666, time 19.75s
+global_step : 140, sent_loss : 0.037113, time 19.65s
+global_step : 150, sent_loss : 0.023040, time 19.67s
+# dev pearson : 0.250954654629, test pearson : 0.263426309174
+# Save, global step 150
+global_step : 160, sent_loss : 0.067271, time 52.02s
+global_step : 170, sent_loss : 0.036551, time 19.56s
+global_step : 180, sent_loss : 0.028893, time 19.59s
+global_step : 190, sent_loss : 0.034213, time 19.57s
+global_step : 200, sent_loss : 0.030270, time 19.54s
+# dev pearson : 0.304616506749, test pearson : 0.333349458212
+# Save, global step 200
+global_step : 210, sent_loss : 0.026778, time 52.19s
+global_step : 220, sent_loss : 0.046712, time 19.60s
+global_step : 230, sent_loss : 0.029370, time 19.65s
+global_step : 240, sent_loss : 0.030909, time 19.65s
+global_step : 250, sent_loss : 0.051624, time 19.68s
+# dev pearson : 0.358311047733, test pearson : 0.370771290948
+# Save, global step 250
+global_step : 260, sent_loss : 0.041730, time 51.99s
+global_step : 270, sent_loss : 0.029841, time 19.63s
+global_step : 280, sent_loss : 0.028691, time 19.61s
+global_step : 290, sent_loss : 0.040726, time 19.51s
+global_step : 300, sent_loss : 0.025909, time 19.69s
+# dev pearson : 0.417644345107, test pearson : 0.423684254477
+# Save, global step 300
+global_step : 310, sent_loss : 0.029413, time 52.33s
+global_step : 320, sent_loss : 0.034410, time 19.62s
+global_step : 330, sent_loss : 0.028025, time 19.64s
+global_step : 340, sent_loss : 0.027987, time 19.64s
+global_step : 350, sent_loss : 0.030528, time 19.67s
+# dev pearson : 0.462127048428, test pearson : 0.457145545654
+# Save, global step 350
+global_step : 360, sent_loss : 0.034380, time 52.02s
+global_step : 370, sent_loss : 0.022207, time 19.66s
+global_step : 380, sent_loss : 0.031181, time 19.61s
+global_step : 390, sent_loss : 0.024534, time 19.68s
+global_step : 400, sent_loss : 0.040498, time 19.78s
+# dev pearson : 0.480757815385, test pearson : 0.4905476918
+# Save, global step 400
+global_step : 410, sent_loss : 0.031366, time 52.11s
+global_step : 420, sent_loss : 0.025871, time 19.57s
+global_step : 430, sent_loss : 0.025135, time 19.63s
+global_step : 440, sent_loss : 0.024725, time 19.72s
+global_step : 450, sent_loss : 0.022469, time 19.72s
+# dev pearson : 0.508670273543, test pearson : 0.515213334906
+# Save, global step 450
+global_step : 460, sent_loss : 0.027017, time 52.38s
+global_step : 470, sent_loss : 0.027032, time 19.61s
+global_step : 480, sent_loss : 0.019247, time 19.59s
+global_step : 490, sent_loss : 0.028777, time 19.59s
+global_step : 500, sent_loss : 0.036479, time 19.55s
+# dev pearson : 0.524847814933, test pearson : 0.524819478603
+# Save, global step 500
+global_step : 510, sent_loss : 0.032511, time 52.16s
+global_step : 520, sent_loss : 0.019662, time 19.62s
+global_step : 530, sent_loss : 0.028009, time 19.59s
+global_step : 540, sent_loss : 0.034326, time 19.68s
+global_step : 550, sent_loss : 0.038478, time 19.59s
+# dev pearson : 0.556698869467, test pearson : 0.537371544749
+# Save, global step 550
+global_step : 560, sent_loss : 0.022085, time 52.06s
+global_step : 570, sent_loss : 0.032725, time 19.61s
+global_step : 580, sent_loss : 0.022437, time 19.64s
+global_step : 590, sent_loss : 0.019269, time 19.55s
+global_step : 600, sent_loss : 0.022512, time 19.66s
+# dev pearson : 0.564581413734, test pearson : 0.548485590946
+# Save, global step 600
+global_step : 610, sent_loss : 0.013289, time 52.24s
+global_step : 620, sent_loss : 0.021881, time 19.59s
+global_step : 630, sent_loss : 0.030334, time 19.61s
+global_step : 640, sent_loss : 0.019464, time 19.58s
+global_step : 650, sent_loss : 0.029498, time 19.64s
+# dev pearson : 0.576885357371, test pearson : 0.564201350867
+# Save, global step 650
+global_step : 660, sent_loss : 0.029159, time 52.03s
+global_step : 670, sent_loss : 0.034363, time 19.66s
+global_step : 680, sent_loss : 0.017081, time 19.69s
+global_step : 690, sent_loss : 0.034567, time 19.64s
+global_step : 700, sent_loss : 0.022003, time 19.69s
+# dev pearson : 0.572215389419, test pearson : 0.556222587935
+global_step : 710, sent_loss : 0.019959, time 49.09s
+global_step : 720, sent_loss : 0.014515, time 19.67s
+global_step : 730, sent_loss : 0.023811, time 19.68s
+global_step : 740, sent_loss : 0.019426, time 19.51s
+global_step : 750, sent_loss : 0.020091, time 19.57s
+# dev pearson : 0.584291841163, test pearson : 0.569766383056
+# Save, global step 750
+global_step : 760, sent_loss : 0.019568, time 52.17s
+global_step : 770, sent_loss : 0.014344, time 19.58s
+global_step : 780, sent_loss : 0.020776, time 19.66s
+global_step : 790, sent_loss : 0.014361, time 19.73s
+global_step : 800, sent_loss : 0.015639, time 19.71s
+# dev pearson : 0.579502446184, test pearson : 0.57717480981
+global_step : 810, sent_loss : 0.031669, time 49.09s
+global_step : 820, sent_loss : 0.019092, time 19.59s
+global_step : 830, sent_loss : 0.019978, time 19.64s
+global_step : 840, sent_loss : 0.020511, time 19.79s
+global_step : 850, sent_loss : 0.019947, time 19.71s
+# dev pearson : 0.589532592441, test pearson : 0.567043280427
+# Save, global step 850
+global_step : 860, sent_loss : 0.015321, time 52.15s
+global_step : 870, sent_loss : 0.014252, time 19.65s
+global_step : 880, sent_loss : 0.017439, time 19.63s
+global_step : 890, sent_loss : 0.012675, time 19.65s
+global_step : 900, sent_loss : 0.015004, time 19.56s
+# dev pearson : 0.589718743105, test pearson : 0.580597298912
+# Save, global step 900
+global_step : 910, sent_loss : 0.021997, time 52.03s
+global_step : 920, sent_loss : 0.016055, time 19.61s
+global_step : 930, sent_loss : 0.014587, time 19.63s
+global_step : 940, sent_loss : 0.016190, time 19.60s
+global_step : 950, sent_loss : 0.020646, time 19.66s
+# dev pearson : 0.593357868012, test pearson : 0.582511144338
+# Save, global step 950
+global_step : 960, sent_loss : 0.018249, time 52.41s
+global_step : 970, sent_loss : 0.016267, time 19.49s
+global_step : 980, sent_loss : 0.020639, time 19.49s
+global_step : 990, sent_loss : 0.021700, time 19.61s
+global_step : 1000, sent_loss : 0.017282, time 19.62s
+# dev pearson : 0.59001523713, test pearson : 0.588085949585
+global_step : 1010, sent_loss : 0.027666, time 49.12s
+global_step : 1020, sent_loss : 0.017726, time 19.73s
+global_step : 1030, sent_loss : 0.019738, time 19.71s
+global_step : 1040, sent_loss : 0.011106, time 19.77s
+global_step : 1050, sent_loss : 0.016606, time 19.94s
+# dev pearson : 0.593278788059, test pearson : 0.586516542882
+global_step : 1060, sent_loss : 0.012000, time 49.11s
+global_step : 1070, sent_loss : 0.018478, time 19.53s
+global_step : 1080, sent_loss : 0.016691, time 19.57s
+global_step : 1090, sent_loss : 0.015291, time 19.53s
+global_step : 1100, sent_loss : 0.015947, time 19.63s
+# dev pearson : 0.604406289517, test pearson : 0.585365630046
+# Save, global step 1100
+global_step : 1110, sent_loss : 0.019809, time 52.41s
+global_step : 1120, sent_loss : 0.019039, time 19.62s
+global_step : 1130, sent_loss : 0.022235, time 19.61s
+global_step : 1140, sent_loss : 0.012840, time 19.54s
+global_step : 1150, sent_loss : 0.010497, time 19.64s
+# dev pearson : 0.600564392994, test pearson : 0.581678062134
+global_step : 1160, sent_loss : 0.014200, time 49.26s
+global_step : 1170, sent_loss : 0.019372, time 19.61s
+global_step : 1180, sent_loss : 0.019710, time 19.63s
+global_step : 1190, sent_loss : 0.015780, time 19.58s
+global_step : 1200, sent_loss : 0.011250, time 19.57s
+# dev pearson : 0.582238857564, test pearson : 0.584812337801
+global_step : 1210, sent_loss : 0.018758, time 49.30s
+global_step : 1220, sent_loss : 0.012712, time 19.66s
+global_step : 1230, sent_loss : 0.009387, time 19.60s
+global_step : 1240, sent_loss : 0.015174, time 19.60s
+global_step : 1250, sent_loss : 0.019280, time 19.58s
+# dev pearson : 0.598575993156, test pearson : 0.583580078948
+global_step : 1260, sent_loss : 0.012324, time 49.26s
+global_step : 1270, sent_loss : 0.019885, time 19.57s
+global_step : 1280, sent_loss : 0.015939, time 19.64s
+global_step : 1290, sent_loss : 0.017448, time 19.62s
+global_step : 1300, sent_loss : 0.012512, time 19.65s
+# dev pearson : 0.610025038064, test pearson : 0.597492786748
+# Save, global step 1300
+global_step : 1310, sent_loss : 0.016292, time 52.20s
+global_step : 1320, sent_loss : 0.009620, time 19.51s
+global_step : 1330, sent_loss : 0.016934, time 19.59s
+global_step : 1340, sent_loss : 0.014893, time 19.60s
+global_step : 1350, sent_loss : 0.008965, time 19.56s
+# dev pearson : 0.604908423105, test pearson : 0.591448612214
+global_step : 1360, sent_loss : 0.010468, time 49.21s
+global_step : 1370, sent_loss : 0.015399, time 19.61s
+global_step : 1380, sent_loss : 0.013426, time 19.60s
+global_step : 1390, sent_loss : 0.015331, time 19.56s
+global_step : 1400, sent_loss : 0.009141, time 19.64s
+# dev pearson : 0.596708953264, test pearson : 0.58911857944
+global_step : 1410, sent_loss : 0.007767, time 49.18s
+global_step : 1420, sent_loss : 0.010004, time 19.55s
+global_step : 1430, sent_loss : 0.012287, time 19.61s
+global_step : 1440, sent_loss : 0.011686, time 19.55s
+global_step : 1450, sent_loss : 0.018898, time 19.65s
+# dev pearson : 0.601232143893, test pearson : 0.592535929831
+global_step : 1460, sent_loss : 0.013603, time 49.26s
+global_step : 1470, sent_loss : 0.005992, time 19.61s
+global_step : 1480, sent_loss : 0.020276, time 19.60s
+global_step : 1490, sent_loss : 0.014910, time 19.69s
+global_step : 1500, sent_loss : 0.014652, time 19.51s
+# dev pearson : 0.582032560052, test pearson : 0.572439253314
+global_step : 1510, sent_loss : 0.011106, time 49.17s
+global_step : 1520, sent_loss : 0.015089, time 19.63s
+global_step : 1530, sent_loss : 0.010568, time 19.51s
+global_step : 1540, sent_loss : 0.010389, time 19.67s
+global_step : 1550, sent_loss : 0.007657, time 19.55s
+# dev pearson : 0.57582022047, test pearson : 0.578080869957
+Early Stop !
+# Done training!
